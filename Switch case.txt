@@ -1,0 +1,54 @@
+Faça um programa que leia três números inteiros positivos e efetue o
+cálculo de uma das seguintes médias de acordo com um valor numérico
+digitado pelo usuário e mostrado na tabela a seguir:
+
+
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;
+    int opcao;
+    
+    printf("Digite o numero 1: ");
+    scanf("%d", &num1);
+    
+    printf("Digite o numero 2: ");
+    scanf("%d", &num2);
+    
+    printf("Digite o numero 3: ");
+    scanf("%d", &num3);
+    
+    printf("\n1 - Geométrica\n2 - Ponderada\n3 - Harmônica\n4 - Aritmética\n\nDigite a opção que deseja calcular: ");
+    scanf("%d", &opcao);
+    
+    switch(opcao){
+        case 1: {
+            int geometrica = num1 * num2 *num3;
+            printf("\nO resultado do calculo geometrico com base nos numeros inseridos anteriormente é: %d", geometrica);
+            break;
+        }
+        
+        case 2: {
+            double ponderada = (num1 + 2 * num2 + 3 * num3) / 6.0;
+            printf("\nO resultado do calculo ponderado com base nos numeros inseridos anteriormente é: %.2f", ponderada);
+            break;
+        }
+        
+        case 3: {
+            double harmonica = ( 1.0 / ( (1.0/num1) + (1.0/num2) + (1.0/num3) ) );
+            printf("\nO resultado do calculo ponderado com base nos numeros inseridos anteriormente é: %lf", harmonica);
+            break;
+        }
+        
+        case 4: {
+            float aritimetica = ((num1+num2+num3)/3);
+            printf("\nO resultado do calculo aritimetico com base nos numeros inseridos anteriormente é: %.2f", aritimetica);
+        }
+        
+        default: printf("Opção invalida!");
+    }
+    
+    
+    return 0;
+}

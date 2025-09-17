@@ -1,0 +1,69 @@
+Imprima todos os números pares compreendidos entre 200 e 300.
+
+#include <stdio.h>
+
+int main() {
+    
+    for(int i = 200; i <= 300; i+=2){
+        printf("\n%d", i);
+    }
+    return 0;
+}
+
+Crie um algoritmo para ler 3 notas de cada aluno de uma turma de 5
+alunos e escreva a média de cada aluno. Escreva também o nome do aluno,
+a média mais alta dessa turma e quantos alunos obtiveram média maior do
+que 6.
+
+#include <stdio.h>
+
+int main() {
+    
+    float nota1, nota2, nota3, media;
+    for(int i = 1; i <= 5; i++){
+        printf("\nDigite a nota 1: ");
+        scanf("%f", &nota1);
+        printf("Digite a nota 2: ");
+        scanf("%f", &nota2);
+        printf("Digite a nota 3: ");
+        scanf("%f", &nota3);
+        
+        media = (nota1 + nota2 + nota3) / 3;
+        printf("Media do aluno %d: %.2f\n", i, media);
+        media = 0;
+        
+    }
+    
+    return 0;
+}
+
+Pirâmide de estrelas. Implemente um algoritmo em c++ que exibauma
+piramide de estrelas conforme entrada n.
+
+Onde n é o numero de niveis da pirâmide.
+
+
+#include <stdio.h>
+
+int main() {
+    int numLinhas;
+    
+    printf("\nDigite o numero de linhas: ");
+    scanf("%d", &numLinhas);
+    
+    for(int i = 1; i <= numLinhas; i++){
+        
+        
+        for(int space = 1; space <= numLinhas - i; space++){
+            printf(" ");
+        }
+        
+        for(int estrela = 1; estrela <= 2*i-1; estrela++){
+            printf("*");
+        }
+        
+        printf("\n");
+    }
+    
+    return 0;
+}
